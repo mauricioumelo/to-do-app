@@ -14,6 +14,7 @@ use Tests\TestCase;
 class TaskServiceUnitTest extends TestCase
 {
     protected $repository;
+
     protected $user;
 
     public function setUp(): void
