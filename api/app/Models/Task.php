@@ -25,6 +25,7 @@ class Task extends Model
             'status' => TaskStatus::class,
         ];
     }
+
     public function user(): HasOne
     {
         return $this->hasOne(User::class, 'user_id', 'id');

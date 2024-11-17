@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('description', 400)->nullable();
             $table->integer('user_id')->unsigned();
-            $table->enum('status',  array_column(TaskStatus::cases(), 'value'))->nullable()->default(TaskStatus::PENDING);
+            $table->enum('status', array_column(TaskStatus::cases(), 'value'))->nullable()->default(TaskStatus::PENDING);
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
